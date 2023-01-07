@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+ 
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Language Translator by Sachin </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="main">
+      <p class="trans">Translator</p>
+    <div class="container">
+      <div class="wrapper">
+        <div class="text-input">
+          <textarea spellcheck="false" class="from-text" placeholder="Enter text"></textarea>
+          <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Translation"></textarea>
+        </div>
+        <ul class="controls">
+          <li class="row from">
+            <div class="icons">
+              <i id="from" class="fas fa-volume-up"></i>
+              <i id="from" class="fas fa-copy"></i>
+            </div>
+            <select></select>
+          </li>
+          <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+          <li class="row to">
+            <select></select>
+            <div class="icons">
+              <i id="to" class="fas fa-volume-up"></i>
+              <i id="to" class="fas fa-copy"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button>Translate Text</button>
+       
+    </div>
+    <div>
+      
+      <div class="social">
+        <a href="https://github.com/Sachin1yadav"> 
+          <img class="logo" src="data:image/png;base64,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" />
+        </a>
+      
+  <a href="https://www.linkedin.com/in/sachin-yadav-a5512523a/">
+    <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIYAAACGCAMAAAAvpwKjAAAAY1BMVEUAAAD////i4uKLi4tTU1PMzMy9vb3u7u7ExMSDg4NISEgODg4cHBySkpIlJSX8/PxwcHD29vazs7Oenp4sLCwYGBjb29tYWFh2dnZ9fX3o6OhOTk5iYmI5OTlpaWnV1dWqqqpwkqhLAAAClklEQVR4nO3c23KqMBQG4IRDAgFEcCs0tdr3f8rKFlogi6lEyUpn1n8Lg99IEnIgMN5HilRlzGEylQo5/DrrEeHOJWHILpRjRpJjILrkyQ+jwEJ0KQYGquLuuDESXAVjSceQaOViSC5vjBBbwVjImUSpqdPsJBPYhi6CpdiELilT2IQuijl9jizFCwTlLyY7YgsY29fxKYhFiFmM84J/R6C1LdGJj1IhNbXnkk9zwFBEcwVKDy0/GQpeNs4ZhangPHbOgBScu/479jDDdf+ohhmB4xY1hhnSbSOWAfUEoa4cAy8YSzelcvxkETBD/3PLCGGG6/YrgxmtYwZ8V7Tz3o+qAAbCiDs1FSiTIAejfOJMghTTjg/aFF0zasQ05kxMIwJZlpWOW+SB7lE1jXLcdlIoFArllo+iFokQh/aZRvgtNDO5ngJO2H8fPdej53NVX2wZGuh9TUYpUK/52h+7XGezI2XQ2vUToAFT9Bvj3nPvl/BmOVkNtewZC4MLzoXFQNya8bmk4Dx4d8ZYGO/dU612WDLAYvGTcm2VsWIkwLBiGhkt/eALGRoaZM0cDhiPZN2gazPGuvH4dgy9pj3djrFq0ntDRuUHY03peIZR1kUafl4Xj6+oLPYMPSwAfSw1qdXjHSFrxngaZG8uyvzPeXNGPbmKgh2PL1RZMuZTlhfQ8XjhsGQYdx1ci7jOz3oxozaus4NOC7ZllEDZg6rLxgzoKQ6dtzFDAxdq3TOgqf2IGMQgBjGIQQxiEIMYxCAGMYhBDGIQgxjE6BMHZibLl2/aOK6hF8DfgQs99d6p5StotEWLQnlpvKhSmS8bUT3ZluvJJmVPtmx7soHdl+38nnzcwJdPPfjy4QtfPgPiy0dROPYnYr4AXkAjycFLtJsAAAAASUVORK5CYII=" />
+  </a>
+        
+        <a href="https://sachin1yadav.github.io/">
+          <img  class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuKz5Kjef5y7Ez0GwQnj-t3ofciJIwfUv0SY9H_a6y0HNF9kJ7OmxxhcJKl151KnfpbIo&usqp=CAU" />
+        </a>
+        
+</div>    
+</div>
+ 
+<marquee   width="100%" direction="right" height="100px">
+   Made By Sachin
+  </marquee>
+  </div>
+
+
+    <script src="js/countries.js"></script>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
