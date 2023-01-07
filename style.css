@@ -54,28 +54,37 @@ body{
 .controls, li, .icons, .icons i{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  gap: 5px;
+  /* border: 1px solid red; */
 }
 .controls{
   list-style: none;
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid red; */
   padding: 12px 15px;
 }
 .controls .row .icons{
   width: 38%;
+  /* border: 1px solid red; */
 }
 .controls .row .icons i{
   width: 50px;
   color: #adadad;
   font-size: 14px;
   cursor: pointer;
+  /* border: 1px solid red; */
   transition: transform 0.2s ease;
   justify-content: center;
 }
 .controls .row.from .icons{
   padding-right: 15px;
   border-right: 1px solid #ccc;
+  /* border: 1px solid red; */
 }
 .controls .row.to .icons{
+  /* border: 1px solid red; */
   padding-left: 15px;
   border-left: 1px solid #ccc;
 }
@@ -83,9 +92,11 @@ body{
   color: #333;
   border: none;
   outline: none;
+  /* border: 1px solid red; */
   font-size: 18px;
   background: none;
   padding-left: 5px;
+    text-align: center;
 }
 .text-input textarea::-webkit-scrollbar{
   width: 4px;
@@ -144,9 +155,14 @@ body{
   .text-input textarea{
     height: 200px;
   }
-  .controls .row .icons{
-    display: none;
+  .controls{
+    flex-direction: column;
   }
+  .exchange{transform: rotate(90deg);
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+   
   .container button{
     padding: 13px;
     font-size: 16px;
@@ -191,3 +207,4 @@ body{
   font-weight: bolder;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
  }
+ 
